@@ -17,7 +17,7 @@ const Welcome = () => {
     error,
     status,
   } = useQuery(["userinfos"], () => {
-    return fetch("http://127.0.0.1:8000/userinfo/", {
+    return fetch("https://instagramdjangobackend.up.railway.app/userinfo/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + String(authTokens.access),

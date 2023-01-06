@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
 
     function updateAccess() {
         if (authTokens) {
-        axios.post('http://127.0.0.1:8000/api/token/refresh/', {
+        axios.post('https://instagramdjangobackend.up.railway.app/api/token/refresh/', {
                 refresh: authTokens.refresh
         })
           .then(function (response) {

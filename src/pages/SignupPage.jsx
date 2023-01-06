@@ -36,7 +36,7 @@ const SignupPage = () => {
   });
 
   const mutation = useMutation(['userSignup'],
-  (body) => postSignUp("http://127.0.0.1:8000/register/", body),
+  (body) => postSignUp("https://instagramdjangobackend.up.railway.app/register/", body),
   {
     onSuccess(data) {
       console.log("Got response from backend", data)
