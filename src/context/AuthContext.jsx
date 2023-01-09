@@ -1,11 +1,12 @@
 import axios from "axios";
 import { createContext, useState,useEffect } from "react";
 import jwt_decode from "jwt-decode"
+import {useNavigate} from "react-router-dom"
 
 export const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
-
+    const navigate = useNavigate();
     let [authTokens, setAuthTokens] = useState(() => localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
     let [user, setUser] = useState(() => localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
     let [loading, setLoading] = useState(false)
@@ -47,6 +48,11 @@ const AuthProvider = ({ children }) => {
         if (!authTokens) {
             setLoading(true)
         }
+        if (window.performance) {
+            if (performance.navigation.type == 1) {
+                navigate('/');
+            }
+          }
         let twentyMinutes = 1000 * 60 * 20
         let interval = setInterval(() => {
             if (authTokens) {
