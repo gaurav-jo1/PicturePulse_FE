@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React,{useEffect} from "react";
+import { Route, Routes,useNavigate } from "react-router-dom";
 import "./App.scss";
 import ProfilePage from "./pages/ProfilePage";
 import LoginPage from "./pages/LoginPage";
@@ -12,6 +12,15 @@ import LoadingScreen from "./components/LoadingScreen";
 import Welcome from "./pages/Welcome";
 
 const App = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the user refreshed the page
+    if (performance.navigation.type == 1) {
+      // Redirect to the home page
+      navigate("/")
+    }
+  }, []);
   return (
     <AuthProvider>
       <div className="app">
