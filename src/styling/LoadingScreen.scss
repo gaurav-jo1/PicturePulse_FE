@@ -5,9 +5,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   img {
     width: 250px;
+  }
+}
+
+.LoadingScreen_meta-logo_container {
+  margin-bottom: 80px;
+
+}
+
+.LoadingScreen_meta-from_container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+
+  .LoadingScreen_meta-name_container {
+    display: flex;
+    align-items: center;
+    
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      img {
+        width: 60px;
+      }
+
+    }
   }
 }
 
