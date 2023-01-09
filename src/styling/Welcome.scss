@@ -180,6 +180,7 @@
 
 @media (max-width: 420px)  {
   .Welcome_text-container {
+    margin-top: -30px;
   
     h1 {
       font-size: 25px;
@@ -187,37 +188,7 @@
   
     h2 {
       font-size: 20px;
-    }
-  
-    p {
-      margin-top: 10px;
-      font-size: 10px;
-    }
-  }
-
-  .Welcome_view_profile-button {
-    margin-top: 30px;
-  
-    button {
-      padding: 6px 0px;
-      width: 160px;
-      
-      strong {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
-@media (max-width: 380px)  {
-  .Welcome_text-container {
-  
-    h1 {
-      font-size: 22px;
-    }
-  
-    h2 {
-      font-size: 18px;
+      margin-top: 2px;
     }
   
     p {
@@ -227,7 +198,40 @@
   }
 
   .Welcome_view_profile-button {
-    margin-top: 30px;
+    margin-top: 40px;
+  
+    button {
+      padding: 8px 0px;
+      width: 250px;
+      
+      strong {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px)  {
+
+  .Welcome_text-container {
+    margin-top: 10px;
+  
+    h1 {
+      font-size: 23px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    p {
+      margin-top: 15px;
+      font-size: 8px;
+    }
+  }
+
+  .Welcome_view_profile-button {
+    margin-top: 25px;
   
     button {
       padding: 6px 0px;
