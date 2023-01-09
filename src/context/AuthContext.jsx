@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
-
-    const navigate = useNavigate();
     let [authTokens, setAuthTokens] = useState(() => localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
     let [user, setUser] = useState(() => localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
     let [loading, setLoading] = useState(false)
@@ -23,7 +21,6 @@ const AuthProvider = ({ children }) => {
 
     function updateAccess() {
         if (authTokens) {
-            navigate("/")
             axios.post('https://instagramdjangobackend.up.railway.app/api/token/refresh/', {
                     refresh: authTokens.refresh
             })
