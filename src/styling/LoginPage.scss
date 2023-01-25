@@ -45,18 +45,14 @@
       @keyframes animate {
         0%,
         100% {
-          background-image: url(../assets/screenshot1.webp);
-        }
-
-        25% {
           background-image: url(../assets/screenshot2.webp);
         }
 
-        50% {
+        33% {
           background-image: url(../assets/screenshot3.webp);
         }
 
-        75% {
+        66% {
           background-image: url(../assets/screenshot4.webp);
         }
       }
