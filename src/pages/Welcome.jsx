@@ -39,7 +39,7 @@ const Welcome = () => {
       <div className="Welcome_text-container">
         <div className="Welcome_text-container_h1">
           <h1>
-            <span>Welcome &nbsp;to&nbsp; </span><span>Instagram!</span>
+            <span>Welcome &nbsp;to&nbsp; </span><span>PicturePulse</span>
           </h1>
         </div>
         <div className="Welcome_text-container_h2">

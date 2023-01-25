@@ -9,7 +9,7 @@ const Footer = () => {
     <footer>
     <div className='External_Links-container'>
         <div className='External_Links-container_group-1'>
-          <a href="/"> <p>Meta</p> </a>
+          <a href="/"> <p>PicturePulse</p> </a>
           <a href="/"> <p>About</p> </a>
           <a href="/"> <p>Blog</p> </a>
           <a href="/"> <p>Jobs</p> </a>
@@ -20,7 +20,7 @@ const Footer = () => {
           <a href="/"> <p>Top Accounts</p> </a>
           <a href="/"> <p>Hashtags</p> </a>
           <a href="/"> <p>Locations</p> </a>
-          <a href="/"> <p>Instagram Lite</p> </a>
+          <a href="/"> <p>PicturePulse Lite</p> </a>
           <a href="/"> <p>Contact Uploading & Non-Users</p></a>
         </div>
         <div className='External_Links-container_group-2'>
@@ -44,7 +44,7 @@ const Footer = () => {
           </select>
           &nbsp;
           &nbsp;
-          <p> &#169; 2023 Instagram from Meta</p>
+          <p> &#169; 2023 PicturePulse by Gaurav</p>
         </div>
     </div>
     </footer>
