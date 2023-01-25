@@ -17,7 +17,7 @@ const Welcome = () => {
     error,
     status,
   } = useQuery(["userinfos"], () => {
-    return fetch("https://instagramdjangobackend.up.railway.app/userinfo/", {
+    return fetch("https://picturepulsebackend.up.railway.app/userinfo/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + String(authTokens.access),

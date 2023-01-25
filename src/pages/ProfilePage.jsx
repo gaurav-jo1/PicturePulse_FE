@@ -29,7 +29,7 @@ const ProfilePage = () => {
   };
 
   const { data: userinfos, isLoading, isError,} = useQuery( ["userinfos"],() => {
-      return fetch('https://instagramdjangobackend.up.railway.app/userinfo/', {
+      return fetch('https://picturepulsebackend.up.railway.app/userinfo/', {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + String(authTokens.access),
@@ -40,7 +40,7 @@ const ProfilePage = () => {
   
 
   const { data: usermedia } = useQuery( ["usermedia"],() => {
-    return fetch('https://instagramdjangobackend.up.railway.app/usermedia/', {
+    return fetch('https://picturepulsebackend.up.railway.app/usermedia/', {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + String(authTokens.access),
@@ -52,7 +52,7 @@ const ProfilePage = () => {
   function callMutation() {
     const formData = new FormData();
     formData.append("gallery", file);
-    axios.post("https://instagramdjangobackend.up.railway.app/usermedia/", formData, {
+    axios.post("https://picturepulsebackend.up.railway.app/usermedia/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: "Bearer " + String(authTokens.access),
@@ -80,7 +80,7 @@ const ProfilePage = () => {
           <div className="user-userinfo">
             {( userinfos?.map((userinfo) => (
                 <div key={userinfo.user} className="user_profile_picture-container">
-                  {userinfo.picture ? <img src={`https://instagramdjangobackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="500" height="600" /> : <img src={no_profile} alt="noprofile" width="500" height="600" /> }
+                  {userinfo.picture ? <img src={`https://picturepulsebackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="500" height="600" /> : <img src={no_profile} alt="noprofile" width="500" height="600" /> }
                 </div>
               )))}
           </div>
@@ -114,7 +114,7 @@ const ProfilePage = () => {
       <div className={`Profiepage_user-media_container_${theme}`}>
         {usermedia?.map((images) => (
             <div key={images.id} className="Profilepage_user-image_container">
-              <img src={`https://instagramdjangobackend.up.railway.app${images.gallery}`} alt="" />
+              <img src={`https://picturepulsebackend.up.railway.app${images.gallery}`} alt="" />
             </div>
           )).reverse()}
         {file && (

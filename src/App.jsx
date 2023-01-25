@@ -8,7 +8,6 @@ import EditPage from "./pages/EditPage";
 import RequireAuth from "./utils/RequireAuth";
 import ThemeContextProvider from "./context/ThemeContextProvider";
 import AuthProvider from "./context/AuthContext";
-import LoadingScreen from "./components/LoadingScreen";
 import Welcome from "./pages/Welcome";
 
 const App = () => {
@@ -22,7 +21,6 @@ const App = () => {
               <Route exact path="/profile" element={<ProfilePage />} />
               <Route exact path="/Edit" element={<EditPage />} />
             </Route>
-            <Route exact path="/loading" element={<LoadingScreen />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
           </Routes>

@@ -34,7 +34,7 @@ const Navbar = () => {
     });
 
   const { data: userinfos, isLoading, isError,} = useQuery(["userinfos"],() =>
-    { return getInfo("https://instagramdjangobackend.up.railway.app/userinfo/").then((t) => t.json());}
+    { return getInfo("https://picturepulsebackend.up.railway.app/userinfo/").then((t) => t.json());}
     , { enabled: !loading }
   );
 
@@ -66,7 +66,7 @@ const Navbar = () => {
           <li> <Link to="/"> <BsHeart /> </Link> </li>
           {userinfos && userinfos?.map((userinfo) => (
             <li className="Navbar_profile_logout" key={userinfo.user}>
-                {userinfo.picture ? <img onClick={() => navigate("/profile")} src={`https://instagramdjangobackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="30" height="30"/> :<img onClick={() => navigate("/profile")} src={no_profile} alt="no profile" width="30" height="30"/>}
+                {userinfo.picture ? <img onClick={() => navigate("/profile")} src={`https://picturepulsebackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="30" height="30"/> :<img onClick={() => navigate("/profile")} src={no_profile} alt="no profile" width="30" height="30"/>}
               <ul>
                 <span className="triangle"></span>
                 <li onClick={() => callLogout()}>Logout <FiLogOut/> </li>
@@ -78,7 +78,7 @@ const Navbar = () => {
         <ul className={`Navbar_container-Box3-icons_two_${theme}`}>
           {userinfos && userinfos?.map((userinfo) => (
             <li className="Navbar_profile_logout" key={userinfo.user}>
-                {userinfo.picture ? <img onClick={() => navigate("/profile")} src={`https://instagramdjangobackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="35" height="35"/> :<img src={no_profile} onClick={() => navigate("/profile")} alt="no profile" width="35" height="35"/>}
+                {userinfo.picture ? <img onClick={() => navigate("/profile")} src={`https://picturepulsebackend.up.railway.app${userinfo.picture}`} alt={userinfo.user} width="35" height="35"/> :<img src={no_profile} onClick={() => navigate("/profile")} alt="no profile" width="35" height="35"/>}
               <ul>
                 <span className="triangle"></span>
                 <li onClick={() => callLogout()}>Logout <FiLogOut/> </li>

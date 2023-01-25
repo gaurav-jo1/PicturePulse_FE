@@ -30,7 +30,7 @@ const LoginPage = () => {
   let navigate = useNavigate();
 
   const mutation = useMutation(['getKeys'],
-    (body) => axios.post("https://instagramdjangobackend.up.railway.app/api/token/", body),
+    (body) => axios.post("https://picturepulsebackend.up.railway.app/api/token/", body),
     {
       onSuccess(data) {
         setAuthTokens(data.data);
