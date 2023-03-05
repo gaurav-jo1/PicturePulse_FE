@@ -36,7 +36,7 @@ const SignupPage = () => {
   });
 
   const mutation = useMutation(['userSignup'],
-  (body) => postSignUp("https://picturepulsebackend.up.railway.app/register/", body),
+  (body) => postSignUp("https://picturepulse.up.railway.app/register/", body),
   {
     onSuccess(data) {
       console.log("Got response from backend", data)

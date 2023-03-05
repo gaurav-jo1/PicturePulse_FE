@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
 
     function updateAccess() {
         if (authTokens) {
-            axios.post('https://picturepulsebackend.up.railway.app/api/token/refresh/', {
+            axios.post('https://picturepulse.up.railway.app/api/token/refresh/', {
                     refresh: authTokens.refresh
             })
           .then(function (response) {

@@ -34,7 +34,7 @@ const EditPage = () => {
     const formData = new FormData();
     formData.append("picture", file);
     axios
-      .patch("https://picturepulsebackend.up.railway.app/userinfo/", formData, {
+      .patch("https://picturepulse.up.railway.app/userinfo/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: "Bearer " + String(authTokens.access),
@@ -64,7 +64,7 @@ const EditPage = () => {
   };
 
   const { data: userinfos, isLoading, isError,} = useQuery(["userinfos"], () => {
-    return fetch('https://picturepulsebackend.up.railway.app/userinfo/', {
+    return fetch('https://picturepulse.up.railway.app/userinfo/', {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + String(authTokens.access),
@@ -73,7 +73,7 @@ const EditPage = () => {
   });
 
   const mutation = useMutation(
-    (body) => postInfo("https://picturepulsebackend.up.railway.app/userinfo/", body),
+    (body) => postInfo("https://picturepulse.up.railway.app/userinfo/", body),
     {onSuccess: (data) => {
       console.log("Got response from backend successfull", data);
       navigate("/profile");
@@ -84,7 +84,7 @@ const EditPage = () => {
   );
 
   const mutationUser = useMutation(
-    (body) => postInfo("https://picturepulsebackend.up.railway.app/user/", body),
+    (body) => postInfo("https://picturepulse.up.railway.app/user/", body),
     {onSuccess: (data) => {
       console.log("Got response from backend successfull", data);
       client.invalidateQueries(["userinfos"]);
@@ -123,7 +123,7 @@ const EditPage = () => {
           <div className="Editpage_container_profile">
             <div className="Editpage_container_profile-image">
               {userinfos?.map((userinfo) => (
-                <img key={userinfo.id} src={`https://picturepulsebackend.up.railway.app${userinfo.picture}`} alt="profile" width="50" height="50" />
+                <img key={userinfo.id} src={`https://picturepulse.up.railway.app${userinfo.picture}`} alt="profile" width="50" height="50" />
               ))}
             </div>
             <div className="Editpage_container_username">
